@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cg2u7q16xub8d"]
+
+[ext_resource type="PackedScene" uid="uid://7jwdfp24f5" path="res://characters/batguy.tscn" id="1_l5lrp"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bwpe3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0nnrx"]
+size = Vector2(643, 43)
+
+[node name="scene" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(2, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(321.375, 342.125)
+scale = Vector2(641.25, 42.25)
+texture = SubResource("PlaceholderTexture2D_bwpe3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(322, 342)
+shape = SubResource("RectangleShape2D_0nnrx")
+
+[node name="batguy" parent="." instance=ExtResource("1_l5lrp")]
