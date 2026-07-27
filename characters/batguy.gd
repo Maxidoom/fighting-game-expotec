@@ -14,6 +14,7 @@ func _physics_process(delta):
 		velocity.y +=gravity*delta
 		$batGuyAnimation.play("jump")
 		$batGuyAnimation.speed_scale = 0
+		$CollisionShape2D.shape = standing_cshape
 	if Input.is_action_just_pressed("jump") and is_on_floor() and is_crouching==false:
 		velocity.y =JUMP_VELOCITY
 		
@@ -21,8 +22,8 @@ func _physics_process(delta):
 		crouch()
 	elif Input.is_action_just_released("crouch"):
 		stand()
-	if Input.is_action_just_pressed("5_LP") :
-		$batGuyAnimation.play("5_LP")
+	if Input.is_action_just_pressed("LP") :
+		LP()
 	var direction = Input.get_axis("left","right")
 	if direction and is_crouching == false:
 		velocity.x = direction * SPEED
@@ -50,11 +51,17 @@ func crouch():
 	if is_crouching:
 		return
 	is_crouching = true
+	
 	$CollisionShape2D.shape = crouching_cshape
 	$CollisionShape2D.position.y = 65
 func stand():
 	if not is_crouching:
 		return
 	is_crouching = false
+	
 	$CollisionShape2D.shape = standing_cshape
 	$CollisionShape2D.position.y = 45
+func LP():
+	if is_on_floor() and not is_crouching:
+		$batGuyAnimation.play("5_LP")
+		

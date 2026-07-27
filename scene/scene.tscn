@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://cg2u7q16xub8d"]
+[gd_scene format=3 uid="uid://cg2u7q16xub8d"]
 
 [ext_resource type="PackedScene" uid="uid://7jwdfp24f5" path="res://characters/batguy.tscn" id="1_l5lrp"]
 
@@ -7,18 +7,19 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0nnrx"]
 size = Vector2(643, 43)
 
-[node name="scene" type="Node2D"]
+[node name="scene" type="Node2D" unique_id=2140749464]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1982192921]
 position = Vector2(2, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2044404365]
 position = Vector2(321.375, 342.125)
 scale = Vector2(641.25, 42.25)
 texture = SubResource("PlaceholderTexture2D_bwpe3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1929795838]
 position = Vector2(322, 342)
 shape = SubResource("RectangleShape2D_0nnrx")
 
-[node name="batguy" parent="." instance=ExtResource("1_l5lrp")]
+[node name="batguy" parent="." unique_id=2103287393 instance=ExtResource("1_l5lrp")]
+position = Vector2(103, 208)

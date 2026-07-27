@@ -1,6 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://7jwdfp24f5"]
+[gd_scene format=3 uid="uid://7jwdfp24f5"]
 
-[ext_resource type="Script" path="res://characters/batguy.gd" id="1_1hcxi"]
+[ext_resource type="Script" uid="uid://di52d1852wg2y" path="res://characters/batguy.gd" id="1_1hcxi"]
 [ext_resource type="Texture2D" uid="uid://dj1fpvhakt6gv" path="res://animaciones/bat guy/idle/bat guy idle-Sheet 200x150.png" id="2_8vstm"]
 [ext_resource type="Texture2D" uid="uid://c0ntonqj4tjww" path="res://animaciones/bat guy/5 wp/bat guy 5 wp4-Sheet.png" id="2_cr5dg"]
 [ext_resource type="Texture2D" uid="uid://bqga5gcm5cul" path="res://animaciones/bat guy/crouch/indiv frames/crouching-Sheet.png" id="2_n320y"]
@@ -273,29 +273,28 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5vfef"]
 _data = {
-"5_LP": SubResource("Animation_eugra"),
-"RESET": SubResource("Animation_q8ila"),
-"crouch": SubResource("Animation_64dni"),
-"idle": SubResource("Animation_regb2"),
-"jump": SubResource("Animation_57tq4"),
-"walk": SubResource("Animation_4wp2u"),
-"walk_backwards": SubResource("Animation_s4x13")
+&"5_LP": SubResource("Animation_eugra"),
+&"RESET": SubResource("Animation_q8ila"),
+&"crouch": SubResource("Animation_64dni"),
+&"idle": SubResource("Animation_regb2"),
+&"jump": SubResource("Animation_57tq4"),
+&"walk": SubResource("Animation_4wp2u"),
+&"walk_backwards": SubResource("Animation_s4x13")
 }
 
-[node name="batguy" type="CharacterBody2D"]
-position = Vector2(106, 192)
+[node name="batguy" type="CharacterBody2D" unique_id=463652325]
+position = Vector2(122, 169)
 script = ExtResource("1_1hcxi")
+metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=906385959]
 position = Vector2(-15, 1)
-texture = ExtResource("2_s0vjh")
-hframes = 2
+texture = ExtResource("2_8vstm")
+hframes = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=773797830]
 position = Vector2(-23, 45)
 shape = ExtResource("3_x4g68")
 
-[node name="batGuyAnimation" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_5vfef")
-}
+[node name="batGuyAnimation" type="AnimationPlayer" parent="." unique_id=372850442]
+libraries/ = SubResource("AnimationLibrary_5vfef")
