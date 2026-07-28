@@ -1,25 +1,25 @@
-[gd_scene format=3 uid="uid://cg2u7q16xub8d"]
+[gd_scene format=3 uid="uid://b4cckuek6icec"]
 
-[ext_resource type="PackedScene" uid="uid://7jwdfp24f5" path="res://characters/batguy.tscn" id="1_l5lrp"]
+[ext_resource type="PackedScene" uid="uid://db0mspehciiwj" path="res://characters/batguy.tscn" id="1_l5lrp"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bwpe3"]
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_x2p7s"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0nnrx"]
-size = Vector2(643, 43)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i40pk"]
+size = Vector2(1036, 65)
 
-[node name="scene" type="Node2D" unique_id=2140749464]
+[node name="scene" type="Node2D" unique_id=310639120]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1982192921]
-position = Vector2(2, 0)
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=923351100]
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=2044404365]
-position = Vector2(321.375, 342.125)
-scale = Vector2(641.25, 42.25)
-texture = SubResource("PlaceholderTexture2D_bwpe3")
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=141189491]
+position = Vector2(327.82678, 290)
+rotation = 3.1415927
+scale = Vector2(661.6536, 61.930805)
+texture = SubResource("PlaceholderTexture2D_x2p7s")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1929795838]
-position = Vector2(322, 342)
-shape = SubResource("RectangleShape2D_0nnrx")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1758823332]
+position = Vector2(373, 291.5)
+shape = SubResource("RectangleShape2D_i40pk")
 
-[node name="batguy" parent="." unique_id=2103287393 instance=ExtResource("1_l5lrp")]
-position = Vector2(103, 208)
+[node name="batguy" parent="." unique_id=463652325 instance=ExtResource("1_l5lrp")]
+position = Vector2(95, 166)
